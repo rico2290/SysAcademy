@@ -13,6 +13,12 @@ import java.awt.Toolkit;
  */
 public class TelaLogin extends javax.swing.JFrame {
 
+    @Override
+    public void setTitle(String string) {
+        super.setTitle("SysAcademy"); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     /**
      * Creates new form TelaLogin
      */
@@ -75,13 +81,13 @@ public class TelaLogin extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addContainerGap()
                 .addComponent(nomeSistema)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 551, 109);
+        jPanel1.setBounds(0, 0, 551, 60);
 
         jLabelusuario.setText("Usuario");
         getContentPane().add(jLabelusuario);
@@ -104,7 +110,6 @@ public class TelaLogin extends javax.swing.JFrame {
         getContentPane().add(botaoSair);
         botaoSair.setBounds(290, 270, 142, 24);
 
-        botaoEntrar.setActionCommand("");
         botaoEntrar.setBackground(new java.awt.Color(51, 102, 0));
         botaoEntrar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         botaoEntrar.setLabel("Entrar");

@@ -28,33 +28,74 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jMenuinicio = new javax.swing.JMenu();
+        jMenuItemSair = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuCadastro = new javax.swing.JMenu();
+        jMenuItemCadDiretor = new javax.swing.JMenuItem();
+        jMenuItemCadProfessor = new javax.swing.JMenuItem();
+        jMenuItemCadAluno = new javax.swing.JMenuItem();
+        jMenuRelatorio = new javax.swing.JMenu();
+        jMenuFerramenta = new javax.swing.JMenu();
+        jMenuItemTelaBenVindo = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        jMenuinicio.setText("Início");
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jMenuItemSair.setText("Sair");
+        jMenuItemSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSairActionPerformed(evt);
+            }
+        });
+        jMenuinicio.add(jMenuItemSair);
+        jMenuinicio.add(jSeparator1);
+
+        jMenuBar1.add(jMenuinicio);
+
+        jMenuCadastro.setText("Cadatro");
+
+        jMenuItemCadDiretor.setText("Diretor");
+        jMenuCadastro.add(jMenuItemCadDiretor);
+
+        jMenuItemCadProfessor.setText("Professor");
+        jMenuItemCadProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadProfessorActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuItemCadProfessor);
+
+        jMenuItemCadAluno.setText("Aluno");
+        jMenuCadastro.add(jMenuItemCadAluno);
+
+        jMenuBar1.add(jMenuCadastro);
+
+        jMenuRelatorio.setText("Relatórios");
+        jMenuBar1.add(jMenuRelatorio);
+
+        jMenuFerramenta.setText("Ferramentas");
+
+        jMenuItemTelaBenVindo.setText("Tela Bem-vindo");
+        jMenuFerramenta.add(jMenuItemTelaBenVindo);
+
+        jMenuBar1.add(jMenuFerramenta);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 644, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 371, Short.MAX_VALUE)
-        );
 
         setSize(new java.awt.Dimension(660, 431));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemCadProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadProfessorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemCadProfessorActionPerformed
+
+    private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -92,8 +133,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuCadastro;
+    private javax.swing.JMenu jMenuFerramenta;
+    private javax.swing.JMenuItem jMenuItemCadAluno;
+    private javax.swing.JMenuItem jMenuItemCadDiretor;
+    private javax.swing.JMenuItem jMenuItemCadProfessor;
+    private javax.swing.JMenuItem jMenuItemSair;
+    private javax.swing.JMenuItem jMenuItemTelaBenVindo;
+    private javax.swing.JMenu jMenuRelatorio;
+    private javax.swing.JMenu jMenuinicio;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
