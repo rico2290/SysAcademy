@@ -24,6 +24,7 @@ public class TelaLogin extends javax.swing.JFrame {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/iconApp.png")));
 
     }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,30 +33,34 @@ public class TelaLogin extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        campoUsuario = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         nomeSistema = new javax.swing.JLabel();
+        jLabelusuario = new javax.swing.JLabel();
+        campoUsuario = new javax.swing.JTextField();
+        campoSenha = new javax.swing.JPasswordField();
         botaoSair = new java.awt.Button();
         botaoEntrar = new java.awt.Button();
-        campoSenha = new javax.swing.JPasswordField();
         jCheckBox1 = new javax.swing.JCheckBox();
+        jLabelsenha = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 410));
+        setMinimumSize(new java.awt.Dimension(500, 352));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(400, 410));
         setState(400);
 
-        campoUsuario.setText("usuario");
-        campoUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoUsuarioActionPerformed(evt);
-            }
-        });
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, botaoSair, org.jdesktop.beansbinding.ELProperty.create("${}"), this, org.jdesktop.beansbinding.BeanProperty.create("defaultCloseOperation"));
+        bindingGroup.addBinding(binding);
+
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 51));
 
         nomeSistema.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        nomeSistema.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nomeSistema.setText("SYSACADEMY - SISTEMA ACADÊMICO");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -75,61 +80,88 @@ public class TelaLogin extends javax.swing.JFrame {
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 551, 109);
+
+        jLabelusuario.setText("Usuario");
+        getContentPane().add(jLabelusuario);
+        jLabelusuario.setBounds(240, 150, 50, 20);
+
+        campoUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoUsuarioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoUsuario);
+        campoUsuario.setBounds(290, 150, 142, 20);
+        getContentPane().add(campoSenha);
+        campoSenha.setBounds(290, 180, 142, 20);
+
         botaoSair.setBackground(new java.awt.Color(255, 102, 0));
         botaoSair.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         botaoSair.setLabel("Sair");
         botaoSair.setName("Sair"); // NOI18N
+        getContentPane().add(botaoSair);
+        botaoSair.setBounds(290, 270, 142, 24);
 
+        botaoEntrar.setActionCommand("");
         botaoEntrar.setBackground(new java.awt.Color(51, 102, 0));
         botaoEntrar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         botaoEntrar.setLabel("Entrar");
+        botaoEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoEntrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoEntrar);
+        botaoEntrar.setBounds(290, 240, 142, 24);
 
-        campoSenha.setText("campoSenha");
-
-        jCheckBox1.setText("Manter conectado");
+        jCheckBox1.setText("Manter-me conectado");
         jCheckBox1.setActionCommand("Manterconectado");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jCheckBox1);
+        jCheckBox1.setBounds(290, 200, 142, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(239, 239, 239)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(campoUsuario)
-                    .addComponent(botaoSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botaoEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(campoSenha)
-                    .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(campoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox1)
-                .addGap(20, 20, 20)
-                .addComponent(botaoEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(botaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
+        jLabelsenha.setText("Senha");
+        getContentPane().add(jLabelsenha);
+        jLabelsenha.setBounds(240, 180, 50, 20);
 
-        botaoSair.getAccessibleContext().setAccessibleName("Sair");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/siscAcadem.png"))); // NOI18N
+        jLabel3.setMaximumSize(new java.awt.Dimension(100, 100));
+        jLabel3.setMinimumSize(new java.awt.Dimension(100, 100));
+        jLabel3.setPreferredSize(new java.awt.Dimension(100, 100));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 110, 220, 200);
 
-        pack();
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Desenvolvido por rsoft Ltda");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(-10, 340, 560, 14);
+
+        bindingGroup.bind();
+
+        setSize(new java.awt.Dimension(551, 352));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void campoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoUsuarioActionPerformed
 
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void botaoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEntrarActionPerformed
+                TelaPrincipal telaPrincipal = new TelaPrincipal();
+        telaPrincipal.setVisible(true);
+        dispose();     // TODO add your handling code here:
+    }//GEN-LAST:event_botaoEntrarActionPerformed
+ 
     /**
      * @param args the command line arguments
      */
@@ -171,7 +203,12 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JPasswordField campoSenha;
     private javax.swing.JTextField campoUsuario;
     private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabelsenha;
+    private javax.swing.JLabel jLabelusuario;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel nomeSistema;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
