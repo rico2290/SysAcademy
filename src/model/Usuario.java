@@ -7,27 +7,30 @@ package model;
 
 /**
  *
- * @author CACOMP
+ * @author hp1180br
  */
 public class Usuario {
     int id;
     String nome;
     String email;
+    String cpf;
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getEmail() {
+        return email;
     }
+    
+    
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public String getEmail() {
-        return email;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getId() {
@@ -37,7 +40,15 @@ public class Usuario {
     public String getNome() {
         return nome;
     }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
     
-   
     
+
 }

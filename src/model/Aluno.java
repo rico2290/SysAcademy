@@ -7,9 +7,8 @@ package model;
 
 /**
  *
- * @author hp1180br
+ * @author CACOMP
  */
-public enum Turno {
-    MANHA, TARDE, NOITE
+public class Aluno extends Usuario{
     
 }

@@ -9,7 +9,7 @@ package model;
  *
  * @author hp1180br
  */
-public enum Turno {
-    MANHA, TARDE, NOITE
+public enum Turma {
+    A, B,C,D
     
 }
